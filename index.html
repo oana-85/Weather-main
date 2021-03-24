@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/43151f1cf4.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+    <header>
+            <div class="row">
+                <div class="col-2">
+                <img class="header-img" src="media/animated/day.svg">
+               </div>
+    <div class="col-6">
+    <h1 class="title">
+        <a href ="https://www.timeanddate.com/weather/antarctica/south-pole/ext" target="_blank">
+            W-FORECAST
+            </a>
+    </h1>
+    </div>
+            <div class="col-4">
+                 <button id="current-location"> Current Location </button> 
+                <form class="float-right" id="search">
+                <input type="text" class="forariam-control" placeholder="Search for city or place..." autocomplete="off" autofocus="on" id="search-text-input">
+               <button type="submit" class="btn btn-primary btn-sm">
+                   Search
+                </button>
+                </form>
+            </div>
+        </div>
+    </header>
+    </div>
+</br>
+<div class="weather-summary">
+    <div class="row">
+        <div class= "col-6">
+            <div class="row">
+    <div class="col-12 h1" >
+       <h2 id="place">South Pole, Antarctica</h2>
+    </div>
+    </div>
+    <div class= "row">
+        <div class="col-6 h1" id="date-time">
+            <span id="weekday">Tuesday </span>
+        </br>
+         <p>16 Feb 2021</p>
+         </div>
+         <div class= "col-6 h1" id="Current-time">
+          Current time </br> <span id="time">00:34</span>
+         </div>
+    </div>
+        </div>
+        <div class="col-6 h2">
+     <span class="strong">Currently:</span></br>
+     <span class="temperature" id="temperature"><img src="media/animated/snowy-1.svg"> -41 </span>
+     <span class="temp">
+        <a href="#" id="celsius">°C </a>
+      </span>
+       <p class="snow" id="description">Snow flurries</p>
+    </div>
+</div>
+</div>
+</br>
+</br>
+<div class="row">
+    <div class="col-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Wed</br> 17 Feb</h5>
+                <img src="media/animated/cloudy.svg">
+                <p class="temperature">-40/-41 °C</p>
+                <p class="weather"> Cloudy </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Thu </br> 18 Feb </h5>
+                <img src="media/animated/cloudy.svg">
+                <p class="temperature">-40/-41 °C</p>
+                <p class="weather"> Cloudy </p>
+            </div>
+        </div>
+    </div>
+     <div class="col-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Fri </br> 19 Feb</h5>
+                <img src="media/animated/snowy-1.svg">
+                <p class="temperature">-40/-41 °C</p>
+                <p class="weather"> Light snow </p>
+            </div>
+       </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sat </br> 20 Feb</h5>
+                <img src="media/animated/day.svg">
+                <p class="temperature">-41/-41 °C</p>
+                <p class="weather"> Sunny </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sun </br> 21 Feb</h5>
+            <img src="media/animated/cloudy-day-2.svg">
+            <p class="temperature">-51/-53 °C</p>
+            <p class="weather"> Broken clouds </p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    coded by Oana Henry
+</footer>
+<script src="src/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+  font-family: "Original Surfer", cursive;
+  background-image: url(https://i1.wp.com/www.antarctica.gov.au/__data/assets/image/0006/63456/varieties/antarctic.jpg?zoom=2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  padding: 20px auto;
+}
+.container-fluid {
+  border-radius: 10px;
+  border-style: hidden;
+  border-color: black;
+  display: block;
+}
+.header-img {
+  display: inline-flex;
+  height: 220px;
+  width: 250px;
+  margin: 10px auto;
+}
+.title {
+  text-decoration: #ffbe00;
+  color: orange;
+  margin-left: 0px;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: orange;
+}
+.float-right {
+  float: right;
+}
+.time {
+  font-size: small;
+}
+.card {
+  width: 12rem;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 20px;
+}
+.card-body {
+  text-align: center;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  border-radius: 20px;
+}
+.card-title {
+  text-align: center;
+}
+.temperature {
+  text-align: center;
+}
+.weather {
+  text-align: center;
+}
+.snow {
+  text-align: left;
+}
+.col-12 h1 {
+  text-align: center;
+}
+
+button {
+  font-weight: bold;
+  border: solid thin lightblue;
+  border-radius: 15 px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 4px 8px;
+  transition: all 180ms ease-in-out;
+}
+button:hover {
+  background: #0b5ed7;
+  color: #ffff;
+}
+
+#current-location {
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 15px;
+}
