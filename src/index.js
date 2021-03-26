@@ -55,16 +55,56 @@ let enteredPlace = document.querySelector("#search");
 enteredPlace.addEventListener("submit", searchInput);
 
 function displayWeather(response) {
+
   document.querySelector("h2").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#description").innerHTML =
+    document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-
-    let iconElement = document.querySelector("#icon");
-    iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    
 }
+
+function getIcon(icon){
+
+let iconElement = "";
+
+  if(icon==="01d" || icon==="01n"){
+    iconElement = "media/animated/day.svg";// day/night, clear sky
+  } else if(icon==="02d"){
+    iconElement = "media/animated/cloudy-day-1.svg";//cloudy day
+  }else if(icon==="02n"){
+  iconElement = "media/animated/cloudy-night-1.svg";//cloudy night
+  }else if(icon==="03d"){
+    iconElement = "media/animated/cloudy.svg"; //scattered clouds
+  }else if(icon==="03n"){
+    iconElement = "media/animated/cloudy.svg";//scattered clouds
+  }else if(icon==="04d"){
+    iconElement = "media/animated/cloudy.svg";//broken clouds
+  }else if(icon==="04n"){
+    iconElement = "media/animated/cloudy.svg";//broken clouds
+  }else if(icon==="09d"){
+    iconElement = "media/animated/rainy-1.svg";//shower rain
+  }else if(icon==="09n"){
+    iconElement = "media/animated/rainy-5.svg";//shower rain
+  }else if(icon==="10d"){
+    iconElement = "media/animated/rainy-4.svg"; //rain
+  }else if("10n"){
+    iconElement = "media/animated/rainy-7.svg";//rain
+  }else if(icon==="11d"){
+    iconElement = "media/animated/thunder.svg";//thunder
+  }else if(icon==="11n"){
+    iconElement = "media/animated/thunder.svg";//thunder
+  }else if(icon==="13d"){
+    iconElement = "media/animated/snowy-1.svg";//snow
+  }else if(icon==="13n"){
+    iconElement = "media/animated/snowy-6.svg";//snow
+  }
+return iconElement();
+}
+document.querySelector("#icon");
+document.setAttribute("src", getIcon(response.data.weather[0].icon));
+
 function searchPlace(city) {
   let units = "metric";
   let apiKey = "9d3ea23f6bf145bbb0d156ccb1b96e37";
