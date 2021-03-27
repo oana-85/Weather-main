@@ -55,14 +55,13 @@ let enteredPlace = document.querySelector("#search");
 enteredPlace.addEventListener("submit", searchInput);
 
 function displayWeather(response) {
-
   document.querySelector("h2").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+    response.data.main.temp);
     document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-    
+    document.querySelector(".icon");
+    document.setAttribute("src", getIcon(response.data.weather[0].icon));
 }
 
 function getIcon(icon){
@@ -102,8 +101,6 @@ let iconElement = "";
   }
 return iconElement();
 }
-document.querySelector("#icon");
-document.setAttribute("src", getIcon(response.data.weather[0].icon));
 
 function searchPlace(city) {
   let units = "metric";
