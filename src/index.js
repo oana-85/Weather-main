@@ -47,11 +47,11 @@ function searchInput(event) {
 }
 let enteredPlace = document.querySelector("#search");
 enteredPlace.addEventListener("submit", searchInput);
+
 function displayWeather(response) {
   document.querySelector("h2").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemp = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document
@@ -116,8 +116,30 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
+
+function showFahrenheit(event){
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp*9)/5+32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelsius(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
 let searchForm = document.querySelector("#search");
 searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click",showFahrenheit);
+
+let celsiusLink=document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
 searchPlace("Arbroath");
