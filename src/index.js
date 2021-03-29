@@ -52,6 +52,10 @@ function displayWeather(response) {
   document.querySelector("h2").innerHTML = response.data.name;
   celsiusTemp = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemp);
+  
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document
