@@ -48,6 +48,10 @@ function searchInput(event) {
 let enteredPlace = document.querySelector("#search");
 enteredPlace.addEventListener("submit", searchInput);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = "Forecast";
+}
 function displayWeather(response) {
   document.querySelector("h2").innerHTML = response.data.name;
   celsiusTemp = response.data.main.temp;
@@ -147,3 +151,4 @@ fahrenheitLink.addEventListener("click",showFahrenheit);
 let celsiusLink=document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsius);
 searchPlace("Arbroath");
+displayForecast();
