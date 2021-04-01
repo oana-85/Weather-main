@@ -186,6 +186,3 @@ button:hover {
 .form-wrapper #submit::-moz-focus-inner {
   border: 0;
 }
-#icon {
-  animation-direction: normal;
-}
