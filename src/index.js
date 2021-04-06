@@ -50,7 +50,7 @@ let forecastElement = document.querySelector("#forecast");
 let forecastHTML = `<div class = "row">`;
 
 forecast.forEach(function (forecastDay, index) {
-if(index< 5){
+if(index< 6){
 forecastHTML =
 forecastHTML+ 
 `<div class="col-sm-2">
@@ -115,35 +115,35 @@ function displayWeather(response) {
 function getIcon(icon) {
   let iconElement = "";
   if (icon === "01d" || icon === "01n") {
-    iconElement = "media/animated/day.svg"; // day/night, clear sky
+    iconElement = "./media/animated/day.svg"; // day/night, clear sky
   } else if (icon === "02d") {
-    iconElement = "media/animated/cloudy-day-1.svg"; //cloudy day
+    iconElement = "./media/animated/cloudy-day-1.svg"; //cloudy day
   } else if (icon === "02n") {
-    iconElement = "media/animated/cloudy-night-1.svg"; //cloudy night
+    iconElement = "./media/animated/cloudy-night-1.svg"; //cloudy night
   } else if (icon === "03d") {
-    iconElement = "media/animated/cloudy.svg"; //scattered clouds
+    iconElement = "./media/animated/cloudy.svg"; //scattered clouds
   } else if (icon === "03n") {
-    iconElement = "media/animated/cloudy.svg"; //scattered clouds
+    iconElement = "./media/animated/cloudy.svg"; //scattered clouds
   } else if (icon === "04d") {
-    iconElement = "media/animated/cloudy.svg"; //broken clouds
+    iconElement = "./media/animated/cloudy.svg"; //broken clouds
   } else if (icon === "04n") {
-    iconElement = "media/animated/cloudy.svg"; //broken clouds
+    iconElement = "./media/animated/cloudy.svg"; //broken clouds
   } else if (icon === "09d") {
-    iconElement = "media/animated/rainy-1.svg"; //shower rain
+    iconElement = "./media/animated/rainy-1.svg"; //shower rain
   } else if (icon === "09n") {
-    iconElement = "media/animated/rainy-5.svg"; //shower rain
+    iconElement = "./media/animated/rainy-5.svg"; //shower rain
   } else if (icon === "10d") {
-    iconElement = "media/animated/rainy-4.svg"; //rain
+    iconElement = "./media/animated/rainy-4.svg"; //rain
   } else if (icon === "10n") {
-    iconElement = "media/animated/rainy-7.svg"; //rain
+    iconElement = "./media/animated/rainy-7.svg"; //rain
   } else if (icon === "11d") {
-    iconElement = "media/animated/thunder.svg"; //thunder
+    iconElement = "./media/animated/thunder.svg"; //thunder
   } else if (icon === "11n") {
-    iconElement = "media/animated/thunder.svg"; //thunder
+    iconElement = "./media/animated/thunder.svg"; //thunder
   } else if (icon === "13d") {
-    iconElement = "media/animated/snowy-1.svg"; //snow
+    iconElement = "./media/animated/snowy-1.svg"; //snow
   } else if (icon === "13n") {
-    iconElement = "media/animated/snowy-6.svg"; //snow
+    iconElement = "./media/animated/snowy-6.svg"; //snow
   }
   return iconElement;
 }
